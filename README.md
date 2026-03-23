@@ -1,5 +1,10 @@
 # Claude Command Center
 
+[![GitHub stars](https://img.shields.io/github/stars/tuning-labs-oss/claude-command-center?style=social)](https://github.com/tuning-labs-oss/claude-command-center/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/tuning-labs-oss/claude-command-center?style=social)](https://github.com/tuning-labs-oss/claude-command-center/network/members)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub last commit](https://img.shields.io/github/last-commit/tuning-labs-oss/claude-command-center)](https://github.com/tuning-labs-oss/claude-command-center/commits/master)
+
 A production-tested template for organizing Claude Code into a multi-domain workspace with persistent memory, session continuity, daily task tracking, and intelligent onboarding.
 
 **Built by [Tuning Labs](https://tuninglabs.net)** — battle-tested across 30+ agent swarms, 70+ tracked items, and months of daily use building a vertical SaaS platform.
